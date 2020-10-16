@@ -7,6 +7,13 @@ namespace UpdateWebDataBase
 {
     public class ConvertData
     {
+        /// <summary>
+        /// Since the database on the webserver as an autoincrement ID,
+        /// it is necessary to create a new model "Reading" without an
+        /// Id.   Then populate it with the data from the new database entry.
+        /// </summary>
+        /// <param name="stuff"></param>
+        /// <returns></returns>
         public Reading ConvertToWebFormat(Stuff stuff)
         {
             Reading result = new Reading()

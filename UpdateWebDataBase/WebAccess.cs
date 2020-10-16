@@ -10,9 +10,17 @@ using UpdateWebDataBase.Domain;
 
 namespace UpdateWebDataBase
 {
+    /// <summary>
+    /// Contains a simple method for posting up to PGTtresources.com
+    /// </summary>
     public static class WebAccess
     {
         private static string postUrl = "https://phtresources.com/api/readings/";
+        /// <summary>
+        /// methos takes a reading and sends it to the API at PHTResources.com
+        /// </summary>
+        /// <param name="reading"></param>
+        /// <returns></returns>
         public static async Task<string> SendToApiAsync(Reading reading)
         {
             var readingJson = JsonConvert.SerializeObject(reading);

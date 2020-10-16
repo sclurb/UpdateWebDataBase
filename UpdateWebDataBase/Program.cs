@@ -14,6 +14,11 @@ namespace UpdateWebDataBase
 {
     class Program
     {
+        /// <summary>
+        /// Main entry point for the app
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         static async Task Main(string[] args)
         {
             var hostBuilder = new HostBuilder()

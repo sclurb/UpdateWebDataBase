@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace UpdateWebDataBase.Domain
 {
+    /// <summary>
+    /// Model for the local database.   Represents one row of the database.,
+    /// </summary>
     public class Stuff
     {
         public int Id { get; set; }

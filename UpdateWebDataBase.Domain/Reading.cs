@@ -4,6 +4,12 @@ using System.Text;
 
 namespace UpdateWebDataBase.Domain
 {
+    /// <summary>
+    /// Simple model with no Id property.   
+    /// The database on the server wil auto increment.
+    /// It should be noted that the Date will be passed on to the 
+    /// web server database.
+    /// </summary>
     public class Reading
     {
         public  decimal Temp1 { get; set; }

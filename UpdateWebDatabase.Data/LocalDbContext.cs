@@ -5,6 +5,9 @@ using UpdateWebDataBase.Domain;
 
 namespace UpdateWebDatabase.Data
 {
+    /// <summary>
+    /// Simple DB Context to interface with the database containing all the readings
+    /// </summary>
     public class LocalDbContext : DbContext
     {
         public DbSet<Stuff> Stuff { get; set; }

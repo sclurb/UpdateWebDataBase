@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 
 namespace UpdateWebDataBase
 {
+    /// <summary>
+    /// Runs ervy minute to check and see if the database has been updated with a new reading. 
+    /// If the database was updated, it fetches the new reading from the database, 
+    /// and sends it up to PHTresources.com
+    /// </summary>
     class TimedHostedService : IHostedService, IDisposable
     {
         private readonly DbAccess _access;
@@ -31,7 +36,10 @@ namespace UpdateWebDataBase
 
             return Task.CompletedTask;
         }
-
+        /// <summary>
+        /// This is where the application starts to do its task every minute
+        /// </summary>
+        /// <param name="state"></param>
         private  void DoWork(object state)
         {
             ConvertData convert = new ConvertData();

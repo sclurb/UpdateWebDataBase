@@ -9,6 +9,10 @@ using UpdateWebDataBase.Domain;
 
 namespace UpdateWebDataBase
 {
+    /// <summary>
+    /// This is a simple "repository" (should have called as such)
+    /// containing a method to query the database and get the latest reading
+    /// </summary>
     class DbAccess
     {
         private readonly LocalDbContext _ctx; 
@@ -17,7 +21,10 @@ namespace UpdateWebDataBase
         {
             _ctx = ctx;
         }
-
+        /// <summary>
+        /// simple method containing a simple query retrieving only one row.   The lastest row added.
+        /// </summary>
+        /// <returns></returns>
         public Stuff GetReading()
         {
             var reading = _ctx.Stuff.OrderByDescending(d => d.Date).First();
